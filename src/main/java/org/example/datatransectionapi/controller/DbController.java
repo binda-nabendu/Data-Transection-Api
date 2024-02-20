@@ -18,21 +18,21 @@ public class DbController {
     }
 
     @PostMapping("/insertDisburse")
-    public void insertDisburse() {
+    public void insertDisburse() {//here i will add some demo transaction
         jdbcDao.insertDisburse(new Disburse(101,5000,100));
         jdbcDao.insertDisburse(new Disburse(102,10000,100));
         jdbcDao.insertDisburse(new Disburse(201,20000,200));
     }
 
     @PostMapping("/insertLoanLedger")
-    public void insertLoanLedger() {
+    public void insertLoanLedger() {//here i will add some demo transaction
         jdbcDao.insertLoanLedger(new LoanLedger(101,5000,0,"DR-CH-1"));
         jdbcDao.insertLoanLedger(new LoanLedger(102,10000,0,"DR-CH-1"));
         jdbcDao.insertLoanLedger(new LoanLedger(201,5000,0,"DR-CH-1"));
     }
 
     @PostMapping("/insertTransactions")
-    public void insertTransactions() {
+    public void insertTransactions() {//here i will add some demo transaction
         jdbcDao.insertTransactions(new Transactions("DR-CH-1",0,15000,"Cash",100));
         jdbcDao.insertTransactions(new Transactions("DR-CH-1",15000,0,"Loan",100));
         jdbcDao.insertTransactions(new Transactions("DR-CH-1",0,20000,"Cash",200));
@@ -40,12 +40,12 @@ public class DbController {
     }
 
     @PostMapping("/updateDisburseByIdAndAmount")
-    public void updateDisburseByIdAndAmount() {
+    public void updateDisburseByIdAndAmount() {//here i will add some demo transaction
         jdbcDao.updateDisburseByIdAndAmount(101, 10000);
         jdbcDao.updateDisburseByIdAndAmount(102, 15000);
     }
 
-    @DeleteMapping("/deleteUser")
+    @DeleteMapping("/deleteUser")//here i will add some demo transaction
     public void deleteUser() {
         jdbcDao.deleteUser(201,200);
     }
